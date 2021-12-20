@@ -1,0 +1,5 @@
+advisorresources
+| where properties.category == 'Cost'
+| extend   
+    annualsavingsamount = todouble(properties.extendedProperties.annualSavingsAmount)    
+| summarize sum(annualsavingsamount)
