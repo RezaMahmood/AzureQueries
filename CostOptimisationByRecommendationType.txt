@@ -1,0 +1,8 @@
+// run the CostOptimisationSummary query to get RecommendationId and replace value
+// get the types of the same recommendations
+advisorresources
+| where properties.category == 'Cost'
+| extend            
+    solution = tostring(properties.shortDescription.solution),
+	recommendationtype = tostring(properties.recommendationTypeId)
+| where properties.recommendationTypeId == '<Insert RecommendationTypeId>'
