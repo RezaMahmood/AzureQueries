@@ -1,0 +1,10 @@
+// Get all the Cost recommendations ordered by AnnualSavings
+advisorresources
+| where properties.category == 'Cost'
+| extend    
+	recommendationtype = tostring(properties.recommendationTypeId),
+    solution = tostring(properties.shortDescription.solution),
+    annualsavingsamount = todouble(properties.extendedProperties.annualSavingsAmount),
+    impact = tostring(properties.impact)
+| summarize AnnualSavings=sum(annualsavingsamount) by recommendationtype, solution, impact
+| sort by AnnualSavings
