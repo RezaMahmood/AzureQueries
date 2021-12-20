@@ -14,4 +14,4 @@
 - Recommendations where the type refers to Right Size or Shut down will not have an annual savings value.  Instead refer to "properties.extendedProperties.targetSku".
   - To calculate targetSku costs a separate call will need to be made against the Pricing API: https://docs.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices
 
-# All the above is achievable by viewing Azure Advisor Cost Optimisation blade in the Azure Portal.  However, to present in a different "finance friendly" format, you will need to export this data and re-present with something like PowerBI.
+## All the above is achievable by viewing Azure Advisor Cost Optimisation blade in the Azure Portal.  However, to present in a different "finance friendly" format, you will need to export this data and re-present with something like PowerBI.
